@@ -115,6 +115,29 @@ function menu(opcion, descripcion){
 			removeClass('li-menu-activo' , document.getElementById("ulMenu").getElementsByTagName("li")[opcion]);
 		}, 300);
 		 
+		 
+		 if(opcion == 1) 
+		 {
+			 //sección venta
+			initVenta();
+		 }
 	 }
 
+}
+
+function initVenta()
+{
+	console.log("init venta");
+	
+	var $btn = $('#buyNowBtn');
+	$btn.on("click", {}, $.proxy(this.clickBtn, this));	
+}
+
+function clickBtn(ev)
+{	
+	//console.log("click boton!!");
+	
+	//50 son los euros a pagar
+	paypalApp.pay(50);		
+	ev.preventDefault();
 }
