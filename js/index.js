@@ -48,7 +48,7 @@ var app = {
     },
 
     onDeviceReady: function() {
-    	alert("onDeviceReady menu dentro del js");
+    	alert("onDeviceReady menu dentro del js: "+ paypalApp);
 		
 		// Ejecutamos la funci—n FastClick, que es la que nos elimina esos 300ms de espera al hacer click
     	new FastClick(document.body);		
@@ -127,7 +127,7 @@ function menu(opcion, descripcion){
 
 function initVenta()
 {
-	console.log("init venta");
+	alert("init venta");
 	
 	var $btn = $('#buyNowBtn');
 	$btn.on("click", {}, $.proxy(this.clickBtn, this));	
