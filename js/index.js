@@ -127,7 +127,7 @@ function menu(opcion, descripcion){
 
 function initVenta()
 {
-	alert("init venta");
+	//alert("init venta");
 	
 	var $btn = $('#buyNowBtn');
 	$btn.on("click", {}, $.proxy(this.clickBtn, this));	
@@ -135,7 +135,7 @@ function initVenta()
 
 function clickBtn(ev)
 {	
-	alert("click boton: " + paypalApp);
+	//alert("click boton: " + paypalApp);
 	
 	//50 son los euros a pagar
 	paypalApp.pay(50);		
